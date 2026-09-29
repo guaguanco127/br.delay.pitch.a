@@ -1,11 +1,11 @@
-# Ableton Max for Live device: br.delay.pitch.1.2  
+# Ableton Max for Live device: br.delay.pitch.a.1.2  
 
 By Brian Riordan  
 [guaguanco127@gmail.com](mailto:guaguanco127@gmail.com)  
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
 
-Repository for br.delay.pitch.1.2, with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch](https://github.com/guaguanco127/br.delay.pitch)  
+Repository for br.delay.pitch.a.1.2 (version a -- a version b with more features is planned), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
 Additional programs can be found here: [https://github.com/guaguanco127/plugins](https://github.com/guaguanco127/plugins)  
 
 Version 1.2 was updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
@@ -59,7 +59,7 @@ Max For Live brings the power and flexibility of Max to Ableton Live. Max For Li
 2. For Macintosh:  
 Go to your user folder  
 Then Music > Ableton > User Library > Presets > Audio Effects  
-Copy and paste br.delay.pitch.1.2.amxd into that folder
+Copy and paste br.delay.pitch.a.1.2.amxd into that folder
 
 3. For Windows: \Users\[username]\Documents\Ableton\User Library\Presets\Audio Effects\Max Audio Effect  
 
