@@ -1,6 +1,6 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.delay.pitch.1.2
+## br.delay.pitch.a.1.2
 
 
 By Brian Riordan  
@@ -8,7 +8,7 @@ By Brian Riordan
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
 
-Repository for br.delay.pitch.1.2, with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch](https://github.com/guaguanco127/br.delay.pitch)  
+Repository for br.delay.pitch.a.1.2 (version a -- a version b with more features is planned), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
 Additional programs can be found here: [https://github.com/guaguanco127/plugins](https://github.com/guaguanco127/plugins)  
 
 Version 1.2 was updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
@@ -17,8 +17,8 @@ Version 1.2 was updated with Max 9. Earlier versions were created with Max/MSP 8
 
 [What's New in 1.2](#whats-new-in-12)  
 [About](#About)   
-[Ableton Max for Live Device](https://github.com/guaguanco127/br.delay.pitch/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
-[Max/MSP Abstraction](https://github.com/guaguanco127/br.delay.pitch/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP  
+[Ableton Max for Live Device](https://github.com/guaguanco127/br.delay.pitch.a/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
+[Max/MSP Abstraction](https://github.com/guaguanco127/br.delay.pitch.a/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP  
 [Version History](#Version)      
 
 ## What's New in 1.2
