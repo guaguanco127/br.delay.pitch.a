@@ -1,4 +1,4 @@
-# Max/MSP Abstraction: br.delay.pitch.a.abs.1.2  
+# Max/MSP Abstraction: br.delay.pitch.a.1.2  
 
 By Brian Riordan  
 [guaguanco127@gmail.com](mailto:guaguanco127@gmail.com)  
@@ -59,13 +59,13 @@ By saving your logic in an abstraction, you can create modules that can be used 
 
 1. Make sure you have Max 9 installed in your computer. And, make sure you are using a Max patch that is inside of a folder.  
 
-2. Copy and paste br.delay.pitch.a.abs.1.2.maxpat inside of the same folder as the Max patch you are using.      
+2. Copy and paste br.delay.pitch.a.1.2.maxpat inside of the same folder as the Max patch you are using.      
 
 3. Also, copy and paste the file called br.delay.pitch.pfft.maxpat into the same folder. If this file is already there, then there is no reason to copy and paste it. **The abstraction will not work without this file.**
 
-4. In the Max patch you are using, create an object called br.delay.pitch.a.abs.1.2 
+4. In the Max patch you are using, create an object called br.delay.pitch.a.1.2 
 
-5. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects featured inside the abstraction. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.a.abs.1.2.maxpat located within the same folder as your project. 
+5. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects featured inside the abstraction. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.a.1.2.maxpat located within the same folder as your project. 
 
 ## <a name="Use"></a>How To Use
 
