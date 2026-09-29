@@ -1,7 +1,6 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.delay.pitch
-
+## br.delay.pitch.1.2
 
 
 By Brian Riordan  
@@ -9,40 +8,50 @@ By Brian Riordan
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
 
-Repository for br.delay.pitch, with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch](https://github.com/guaguanco127/br.delay.pitch)  
+Repository for br.delay.pitch.1.2, with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch](https://github.com/guaguanco127/br.delay.pitch)  
 Additional programs can be found here: [https://github.com/guaguanco127/plugins](https://github.com/guaguanco127/plugins)  
 
-
-These files were created with Max/MSP version 8.5.6. 
+Version 1.2 was updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
 
 ## Links
 
+[What's New in 1.2](#whats-new-in-12)  
 [About](#About)   
-[Ableton Max for Live Device](https://github.com/guaguanco127/br.delay.pitch/tree/main/Ableton%20Max%20For%20Live%20) To use inside of Ableton Suite   
+[Ableton Max for Live Device](https://github.com/guaguanco127/br.delay.pitch/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
 [Max/MSP Abstraction](https://github.com/guaguanco127/br.delay.pitch/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP  
 [Version History](#Version)      
 
+## What's New in 1.2
+
+- **Much lower CPU.** The spectral pitch shifter switches itself off completely once the effect is off and the repeats have died away, and wakes instantly when you turn it back on. About 1% CPU at rest.
+- **Half the latency.** The pitch shifter now adds about 23 ms instead of 46 ms, so the repeats land closer to the Delay time.
+- **Cleaner highs.** Partials shifted above the top of the audio range are dropped instead of folding back down as metallic, out-of-tune tones -- which mattered here, since every repeat is shifted again.
+- **Warm, runaway-proof loop.** The feedback loop has a soft saturator, so repeats can never explode. Feedback now goes up to 1.25: 1.0 holds the loop forever, above 1.0 it builds into a saturated wash.
+- **New Highpass and Lowpass controls** for the feedback loop (never below 40 Hz, never above 15 kHz), smooth and accurate at any setting.
+- **Self-contained.** No third-party or Max example files are needed; the pitch-shifting FFT patch "br.delay.pitch.pfft" ships in each folder.
+- **Starts bypassed** when loaded. Turning it off only stops new sound entering the loop -- the repeats keep going and ring out.
 
 ## <a name="About"></a>About
 
-This is a delay-based Max/MSP abstraction, and Ableton Max for Live device that introduces a pitch-shifter in the delay line. A low pass and high pass filter is included to prevent extreme build up of high and low frequencies within the feedback line. 
+This is a delay-based Max/MSP abstraction, and Ableton Max for Live device that places a pitch-shifter inside the delay line, so every repeat is shifted again -- climbing or falling with each pass. The feedback loop is protected by a soft saturator and by a high pass and low pass filter, so pitch-shifted repeats can never build up too high, too low or too loud.
 
-The delay line goes through a high pass filter set to 40 Hz, and a low pass set to 12,000 Hz. This is to prevent pitchshifted frequencies in the feedback line that from going too high or too low. 
+Only works as an abstraction or a device. External objects and RNBO not available yet. An important file is included in each folder called "br.delay.pitch.pfft.maxpat". Keep it in the same folder as the abstraction or device -- they will not work without it.
 
-Only works as an abstraction or a device. External objects and RNBO not available yet.  
-
-**On/Off:** Turn the effect on or bypass
+**On/Off:** Turns the effect on, or bypasses new input. The default is bypass. Turning it off only stops new sound entering the delay; the repeats already in the loop keep going and ring out (or hold, at Feedback 1.0 or above). Dry/Wet still works while it is off.
   
-**Pitchshift:** Pitch-shift Factor in steps. -24. to 24. Default 0. Microtonal pitch-shifting is possible by using numbers in between integers. For example, -0.50 is pitch-shifted down by a quarter tone. This portion of the effect introduces a latency of 2048 samples. 
+**Pitchshift:** Pitch-shift factor in semitones, -24 to 24. The default is 0. Microtonal pitch-shifting is possible by using numbers in between integers. For example, -0.50 is pitch-shifted down by a quarter tone. The pitch-shifter adds a latency of 1024 samples (about 23 ms at 44,100 Hz).
 
-**Delay Time:** Delay time in ms. Between 0. and 1000 ms. It is important to note that the lowest possible delay time is actually the signal vector size in samples. For example, if the vector size is set to 256 samples (Which is approximately 5.8 ms at 44,100 sample rate) combined with the latency of the pitch-shifter  (Which is approximately 46.43 at 44,100 sample rate) then the shortest delay would be approximately 52.23 ms. Regardless of the perscribed ms delay time, this will be the resulting minimum delay. If the delay time is set to be above 5.8 ms, then the delay time will be the perscribed time plusthe latency of the pitch-shifter. 
+**Delay Time:** Delay time in ms, between 0 and 1000 ms. The default is 100 ms. The actual delay is the prescribed time plus the pitch-shifter's latency. The shortest possible delay is one signal vector plus that latency: for example, with a vector size of 256 samples (about 5.8 ms at 44,100 Hz), the shortest delay is about 29 ms.
   
-**Feedback:** The amount of signal that is fed back into the delay line. The range is between 0 and 0.99 
+**Feedback:** The amount of signal fed back into the delay line, between 0 and 1.25. The default is 0. At 1.0 the repeats hold forever; above 1.0 they build until the loop's soft saturator holds them, giving a dense, driven wash.
 
-**Dry/Wet:** The amount of dry and wet signal between 0. and 100. The default is 100.  
+**Dry/Wet:** The amount of dry and wet signal between 0 and 100. The default is 100.  
+
+**Highpass:** High pass filter in the feedback loop, between 40 Hz and 1,000 Hz. The default is 40 Hz. It never goes below 40 Hz, so low frequencies can never build up.
+
+**Lowpass:** Low pass filter in the feedback loop, between 1,000 Hz and 15,000 Hz. The default is 12,000 Hz. It never goes above 15 kHz, so high frequencies can never build up.
 
 ## <a name="Version"></a>Version History  
 
-Version 1.1 included a dc block into the feedback line on 05-14-2024. 
-
- 
+Version 1.2 lowered CPU (the pitch-shifter switches off once off and silent), halved the pitch-shifter latency (1024 samples), removed foldover aliasing, added a soft saturator plus Highpass/Lowpass controls to the feedback loop, raised Feedback to 1.25, made it self-contained, and starts bypassed. The DC blocker now sits after the pitch-shifter.  
+Version 1.1 included a dc block into the feedback line on 05-14-2024.
