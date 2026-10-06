@@ -39,13 +39,15 @@
         "enablehscroll": 1,
         "enablevscroll": 1,
         "devicewidth": 0.0,
-        "description": "",
+        "description" : "br.delay.pitch.pfft -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
         "digest": "",
         "tags": "",
         "style": "",
         "subpatcher_template": "",
         "assistshowspatchername": 0,
         "boxes": [
+{"box": {"id": "obj-signature", "maxclass": "comment", "numinlets": 1, "numoutlets": 0, "patching_rect": [680.0, 40.0, 520.0, 60.0], "text": "br.delay.pitch.pfft -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: built around gizmo~ (Cycling '74).", "linecount": 3}},
+
             {
                 "box": {
                     "maxclass": "newobj",
