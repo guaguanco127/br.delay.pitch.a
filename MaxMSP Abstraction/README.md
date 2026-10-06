@@ -94,3 +94,7 @@ Double click on the object and you can see inside of the object. This way you ca
 
 Version 1.2 lowered CPU (the pitch-shifter switches off once off and silent), halved the pitch-shifter latency (1024 samples), removed foldover aliasing, added a soft saturator plus Highpass/Lowpass controls to the feedback loop, raised Feedback to 1.25, made it self-contained, and starts bypassed. The DC blocker now sits after the pitch-shifter.  
 Version 1.1 included a dc block into the feedback line on 05-14-2024.
+
+## <a name="Credits"></a>Credits
+
+Built around gizmo~ (Cycling '74).
