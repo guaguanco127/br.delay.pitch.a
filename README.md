@@ -1,6 +1,6 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.delay.pitch.a.1.3
+## br.delay.pitch.a.1.4
 
 
 By Brian Riordan  
@@ -8,20 +8,25 @@ By Brian Riordan
 [brianriordanmusic@gmail.com](mailto:brianriordanmusic@gmail.com)  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
 
-Repository for br.delay.pitch.a.1.3 (version a), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
+Repository for br.delay.pitch.a.1.4 (version a), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
 Version b (same sound plus just-intonation steps and Rand / Auto / Onset randomizing): [https://github.com/guaguanco127/br.delay.pitch.b](https://github.com/guaguanco127/br.delay.pitch.b)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)  
 
-Versions 1.2 and 1.3 were updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
+Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
 
 ## Links
 
+[What's New in 1.4](#whats-new-in-14)  
 [What's New in 1.3](#whats-new-in-13)  
 [What's New in 1.2](#whats-new-in-12)  
 [About](#About)   
 [Ableton Max for Live Device](https://github.com/guaguanco127/br.delay.pitch.a/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
 [Max/MSP Abstraction](https://github.com/guaguanco127/br.delay.pitch.a/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP  
 [Version History](#Version)      
+
+## What's New in 1.4
+
+- **Mix Mode is now "Thru" / "Aux" (was "Insert" / "Gate").** "Thru" (0) lets the dry sound pass while the effect is off; "Aux" (1) is silent until you turn it on, for use on a send/return. Only the names changed: the numbers, the default and the sound are exactly as in 1.3, so 1.4 swaps in without rewiring.
 
 ## What's New in 1.3
 
@@ -61,10 +66,11 @@ Only works as an abstraction or a device. External objects and RNBO not availabl
 
 **Lowpass:** Low pass filter in the feedback loop, between 1,000 Hz and 15,000 Hz. The default is 12,000 Hz. It never goes above 15 kHz, so high frequencies can never build up.
 
-**Mix Mode (Insert / Gate):** What happens to your dry sound while the effect is off. Insert (the default) lets the dry sound pass through, as before. Gate silences it, so only the repeats already in the loop ring out. While the effect is on, Mix Mode changes nothing.
+**Mix Mode (Thru / Aux):** What happens to your dry sound while the effect is off. Thru (the default) lets the dry sound pass through, as before. Aux silences it, so only the repeats already in the loop ring out. While the effect is on, Mix Mode changes nothing.
 
 ## <a name="Version"></a>Version History  
 
+Version 1.4 (10-09-2026) renamed Mix Mode to Thru / Aux.  
 Version 1.3 (10-09-2026) added Insert / Gate (Mix Mode), a State outlet and an example patch to the abstraction, and readable control names.  
 Version 1.2 lowered CPU (the pitch-shifter switches off once off and silent), halved the pitch-shifter latency (1024 samples), removed foldover aliasing, added a soft saturator plus Highpass/Lowpass controls to the feedback loop, raised Feedback to 1.25, made it self-contained, and starts bypassed. The DC blocker now sits after the pitch-shifter.  
 Version 1.1 included a dc block into the feedback line on 05-14-2024.

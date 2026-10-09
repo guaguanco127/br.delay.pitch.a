@@ -18,11 +18,11 @@
 		"openrectmode": 0,
 		"openinpresentation": 1,
 		"devicewidth": 145.0,
-		"description": "br.delay.pitch.a.1.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
+		"description": "br.delay.pitch.a.1.4 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
 		"boxes": [
 			{
 				"box": {
-					"comment": "Mix Mode (Int) 0 = Insert (Off passes the dry signal), 1 = Gate (Off silences the dry signal; the repeats still ring out). Default 0",
+					"comment": "Mix Mode (Int) 0 = Thru (Off passes the dry signal), 1 = Aux (Off silences the dry signal; the repeats still ring out). Default 0",
 					"id": "mm-in",
 					"index": 10,
 					"maxclass": "inlet",
@@ -85,8 +85,8 @@
 							"parameter_type": 2
 						}
 					},
-					"text": "Insert",
-					"texton": "Gate",
+					"text": "Thru",
+					"texton": "Aux",
 					"varname": "Mix Mode"
 				}
 			},
@@ -176,7 +176,7 @@
 						140.0,
 						47.0
 					],
-					"text": "bypass dry = Off AND Insert (Gate: Off = dry silent)"
+					"text": "bypass dry = Off AND Thru (Aux: Off = dry silent)"
 				}
 			},
 			{
@@ -660,7 +660,7 @@
 						520.0,
 						47.0
 					],
-					"text": "br.delay.pitch.a.1.3 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: built around gizmo~ (Cycling '74)."
+					"text": "br.delay.pitch.a.1.4 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: built around gizmo~ (Cycling '74)."
 				}
 			},
 			{
@@ -4806,7 +4806,7 @@
 			{
 				"box": {
 					"angle": 270.0,
-					"annotation": "br.delay.pitch.a.1.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
+					"annotation": "br.delay.pitch.a.1.4 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
 					"bgcolor": [
 						0.0,
 						0.0,
@@ -4819,7 +4819,7 @@
 						0.0,
 						1.0
 					],
-					"hint": "br.delay.pitch.a.1.3 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
+					"hint": "br.delay.pitch.a.1.4 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
 					"id": "obj-25",
 					"maxclass": "panel",
 					"mode": 0,
