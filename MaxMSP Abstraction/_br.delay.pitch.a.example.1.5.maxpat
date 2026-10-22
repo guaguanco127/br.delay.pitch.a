@@ -10,7 +10,7 @@
         },
         "classnamespace": "box",
         "rect": [ 139.0, 132.0, 1350.0, 800.0 ],
-        "description": "_br.delay.pitch.a.example.1.4 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
+        "description": "_br.delay.pitch.a.example.1.5 -- Created by Brian Riordan, guaguanco127@gmail.com -- https://github.com/guaguanco127/ -- Credits: built around gizmo~ (Cycling '74).",
         "showontab": 1,
         "boxes": [
             {
@@ -23,7 +23,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 887.0, 5.0, 468.0, 47.0 ],
-                    "text": "_br.delay.pitch.a.example.1.4 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: built around gizmo~ (Cycling '74)."
+                    "text": "_br.delay.pitch.a.example.1.5 -- Created by Brian Riordan, guaguanco127@gmail.com\nhttps://github.com/guaguanco127/\nCredits: built around gizmo~ (Cycling '74)."
                 }
             },
             {
@@ -329,7 +329,7 @@
                     "lockeddragscroll": 0,
                     "lockedsize": 0,
                     "maxclass": "bpatcher",
-                    "name": "br.delay.pitch.a.1.4.maxpat",
+                    "name": "br.delay.pitch.a.1.5.maxpat",
                     "numinlets": 10,
                     "numoutlets": 3,
                     "offset": [ 0.0, 0.0 ],
@@ -349,7 +349,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 89.0, 305.0, 295.0, 33.0 ],
-                    "text": "br.delay.pitch.a.1.4 (bpatcher). It opens BYPASSED: turn it on."
+                    "text": "br.delay.pitch.a.1.5 (bpatcher). It opens BYPASSED: turn it on."
                 }
             },
             {
@@ -362,7 +362,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "patching_rect": [ 180.0, 422.0, 162.0, 87.0 ],
-                    "text": "Keep these files together, next to your patch: br.delay.pitch.a.1.4.maxpat and br.delay.pitch.pfft.maxpat (the pitch shifter it loads)."
+                    "text": "Keep these files together, next to your patch: br.delay.pitch.a.1.5.maxpat and br.delay.pitch.pfft.1.5.maxpat (the pitch shifter it loads)."
                 }
             },
             {
