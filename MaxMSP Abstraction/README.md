@@ -1,18 +1,19 @@
-# Max/MSP Abstraction: br.delay.pitch.a.1.4  
+# Max/MSP Abstraction: br.delay.pitch.a.1.5  
 
 By Brian Riordan  
 guaguanco127 [at] gmail [dot] com  
 brianriordanmusic [at] gmail [dot] com  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
 
-Repository for br.delay.pitch.a.1.4 (version a), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
+Repository for br.delay.pitch.a.1.5 (version a), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
 Version b (same sound plus just-intonation steps and Rand / Auto / Onset randomizing): [https://github.com/guaguanco127/br.delay.pitch.b](https://github.com/guaguanco127/br.delay.pitch.b)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)  
 
-Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
+Versions 1.2 through 1.5 were updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
 
 ## Table of Contents 
 
+[What's New in 1.5](#whats-new-in-15)  
 [What's New in 1.4](#whats-new-in-14)  
 [What's New in 1.3](#whats-new-in-13)  
 [What's New in 1.2](#whats-new-in-12)  
@@ -23,6 +24,11 @@ Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created 
 [State outlet](#State)  
 [Example Patch](#Example)  
 [Version History](#Version) 
+
+## What's New in 1.5
+
+- **Frozen Max for Live device.** The device now carries its helper files inside it, so copying the .amxd alone is enough.
+- **One version number.** Every file in this repository is now 1.5, including the helper files. Nothing changed in the sound.
 
 ## What's New in 1.4
 
@@ -50,7 +56,7 @@ Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created 
 
 This is a delay-based Max/MSP abstraction, and Ableton Max for Live device that places a pitch-shifter inside the delay line, so every repeat is shifted again -- climbing or falling with each pass. The feedback loop is protected by a soft saturator and by a high pass and low pass filter, so pitch-shifted repeats can never build up too high, too low or too loud.
 
-Only works as an abstraction or a device. External objects and RNBO not available yet. An important file is included in each folder called "br.delay.pitch.pfft.maxpat". Keep it in the same folder as the abstraction or device -- they will not work without it.
+Only works as an abstraction or a device. External objects and RNBO not available yet. An important file is included in each folder called "br.delay.pitch.pfft.1.5.maxpat". The abstraction needs it in the same folder; the Max for Live device is frozen and already contains it.
 
 **On/Off:** Turns the effect on, or bypasses new input. The default is bypass. Turning it off only stops new sound entering the delay; the repeats already in the loop keep going and ring out (or hold, at Feedback 1.0 or above). Dry/Wet still works while it is off.
   
@@ -78,13 +84,13 @@ By saving your logic in an abstraction, you can create modules that can be used 
 
 1. Make sure you have Max 9 installed in your computer. And, make sure you are using a Max patch that is inside of a folder.  
 
-2. Copy and paste br.delay.pitch.a.1.4.maxpat inside of the same folder as the Max patch you are using.      
+2. Copy and paste br.delay.pitch.a.1.5.maxpat inside of the same folder as the Max patch you are using.      
 
-3. Also, copy and paste the file called br.delay.pitch.pfft.maxpat into the same folder. If this file is already there, then there is no reason to copy and paste it. **The abstraction will not work without this file.**
+3. Also, copy and paste the file called br.delay.pitch.pfft.1.5.maxpat into the same folder. If this file is already there, then there is no reason to copy and paste it. **The abstraction will not work without this file.**
 
-4. In the Max patch you are using, create an object called br.delay.pitch.a.1.4 
+4. In the Max patch you are using, create an object called br.delay.pitch.a.1.5 
 
-5. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects featured inside the abstraction. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.a.1.4.maxpat located within the same folder as your project. 
+5. Alternatively, you could also create this inside of a bpatcher object and use all of the preset UI objects featured inside the abstraction. To do this, create a bpatcher object. Then, go inside of its inspector, select "choose" next to "Patcher File" and select the br.delay.pitch.a.1.5.maxpat located within the same folder as your project. 
 
 ## <a name="Use"></a>How To Use
 
@@ -132,7 +138,7 @@ The last outlet sends the current settings as named messages the moment they cha
 
 ## <a name="Example"></a>Example Patch
 
-Open _br.delay.pitch.a.example.1.4.maxpat (keep it in the same folder as the abstraction and br.delay.pitch.pfft.maxpat). Turn on the audio with the toggle, then raise the gain slider, which starts muted.
+Open _br.delay.pitch.a.example.1.5.maxpat (keep it in the same folder as the abstraction and br.delay.pitch.pfft.1.5.maxpat). Turn on the audio with the toggle, then raise the gain slider, which starts muted.
 
 - **Source:** the demo saw plucks (220 Hz left, 330 Hz right) start when the patch opens; turn on the mic / line in 1 + 2 toggle to use your own sound.
 - **Delay-Pitch:** it opens bypassed, so turn it on on the panel (or with the On/Off toggle), then try the pitch, delay and feedback messages.
@@ -141,6 +147,7 @@ Open _br.delay.pitch.a.example.1.4.maxpat (keep it in the same folder as the abs
 
 ## <a name="Version"></a>Version History  
 
+Version 1.5 (10-21-2026) froze the Max for Live device and gave every file in the repository the same version number.  
 Version 1.4 (10-09-2026) renamed Mix Mode to Thru / Aux.  
 Version 1.3 (10-09-2026) added Insert / Gate (Mix Mode), a State outlet and an example patch to the abstraction, and readable control names.  
 Version 1.2 lowered CPU (the pitch-shifter switches off once off and silent), halved the pitch-shifter latency (1024 samples), removed foldover aliasing, added a soft saturator plus Highpass/Lowpass controls to the feedback loop, raised Feedback to 1.25, made it self-contained, and starts bypassed. The DC blocker now sits after the pitch-shifter.  

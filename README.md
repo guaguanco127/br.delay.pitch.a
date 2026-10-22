@@ -1,6 +1,6 @@
 # Max/MSP Patches, Abstractions, Externals, RNBO, VSTs, and Ableton Max for Live 
 
-## br.delay.pitch.a.1.4
+## br.delay.pitch.a.1.5
 
 
 By Brian Riordan  
@@ -8,14 +8,15 @@ guaguanco127 [at] gmail [dot] com
 brianriordanmusic [at] gmail [dot] com  
 [https://www.brianriordanmusic.com/](https://www.brianriordanmusic.com/) 
 
-Repository for br.delay.pitch.a.1.4 (version a), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
+Repository for br.delay.pitch.a.1.5 (version a), with all related files, can be found here: [https://github.com/guaguanco127/br.delay.pitch.a](https://github.com/guaguanco127/br.delay.pitch.a)  
 Version b (same sound plus just-intonation steps and Rand / Auto / Onset randomizing): [https://github.com/guaguanco127/br.delay.pitch.b](https://github.com/guaguanco127/br.delay.pitch.b)  
 Additional programs can be found here: [https://github.com/guaguanco127/br.max](https://github.com/guaguanco127/br.max)  
 
-Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
+Versions 1.2 through 1.5 were updated with Max 9. Earlier versions were created with Max/MSP 8.5.6. 
 
 ## Links
 
+[What's New in 1.5](#whats-new-in-15)  
 [What's New in 1.4](#whats-new-in-14)  
 [What's New in 1.3](#whats-new-in-13)  
 [What's New in 1.2](#whats-new-in-12)  
@@ -23,6 +24,11 @@ Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created 
 [Ableton Max for Live Device](https://github.com/guaguanco127/br.delay.pitch.a/tree/main/Ableton%20Max%20For%20Live) To use inside of Ableton Suite   
 [Max/MSP Abstraction](https://github.com/guaguanco127/br.delay.pitch.a/tree/main/MaxMSP%20Abstraction) To use as an abstraction within Max/MSP  
 [Version History](#Version)      
+
+## What's New in 1.5
+
+- **Frozen Max for Live device.** The device now carries its helper files inside it, so copying the .amxd alone is enough.
+- **One version number.** Every file in this repository is now 1.5, including the helper files. Nothing changed in the sound.
 
 ## What's New in 1.4
 
@@ -50,7 +56,7 @@ Versions 1.2 through 1.4 were updated with Max 9. Earlier versions were created 
 
 This is a delay-based Max/MSP abstraction, and Ableton Max for Live device that places a pitch-shifter inside the delay line, so every repeat is shifted again -- climbing or falling with each pass. The feedback loop is protected by a soft saturator and by a high pass and low pass filter, so pitch-shifted repeats can never build up too high, too low or too loud.
 
-Only works as an abstraction or a device. External objects and RNBO not available yet. An important file is included in each folder called "br.delay.pitch.pfft.maxpat". Keep it in the same folder as the abstraction or device -- they will not work without it.
+Only works as an abstraction or a device. External objects and RNBO not available yet. An important file is included in each folder called "br.delay.pitch.pfft.1.5.maxpat". The abstraction needs it in the same folder; the Max for Live device is frozen and already contains it.
 
 **On/Off:** Turns the effect on, or bypasses new input. The default is bypass. Turning it off only stops new sound entering the delay; the repeats already in the loop keep going and ring out (or hold, at Feedback 1.0 or above). Dry/Wet still works while it is off.
   
@@ -70,6 +76,7 @@ Only works as an abstraction or a device. External objects and RNBO not availabl
 
 ## <a name="Version"></a>Version History  
 
+Version 1.5 (10-21-2026) froze the Max for Live device and gave every file in the repository the same version number.  
 Version 1.4 (10-09-2026) renamed Mix Mode to Thru / Aux.  
 Version 1.3 (10-09-2026) added Insert / Gate (Mix Mode), a State outlet and an example patch to the abstraction, and readable control names.  
 Version 1.2 lowered CPU (the pitch-shifter switches off once off and silent), halved the pitch-shifter latency (1024 samples), removed foldover aliasing, added a soft saturator plus Highpass/Lowpass controls to the feedback loop, raised Feedback to 1.25, made it self-contained, and starts bypassed. The DC blocker now sits after the pitch-shifter.  
