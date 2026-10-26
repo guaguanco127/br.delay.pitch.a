@@ -3715,7 +3715,7 @@
 						191.0,
 						47.0
 					],
-					"text": "The pitchshifter adds a 1024 sample latency (about 23 ms at 44.1 kHz) to all signals coming in. "
+					"text": "The pitch-shifter adds a 768 sample latency (FFT size 1024 - hop 256) to all signals coming in. "
 				}
 			},
 			{
